@@ -1,0 +1,448 @@
+/* ============================================================
+   PaperEater 白话文 — Obsidian 侧边栏主题
+   主色 #B85C4E（红陶土）  / 兼容浅色 & 深色模式
+   ============================================================ */
+
+/* ── 根容器 ───────────────────────────────────────────────── */
+
+.pe-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--background-primary);
+  font-family: var(--font-text);
+  font-size: 14px;
+}
+
+/* ── 顶栏 ──────────────────────────────────────────────────── */
+
+.pe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 12px;
+  border-bottom: 1.5px solid rgba(184, 92, 78, 0.2);
+  background: rgba(184, 92, 78, 0.06);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.pe-logo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #B85C4E;
+  flex-shrink: 0;
+}
+
+/* ── 模式切换胶囊 ──────────────────────────────────────────── */
+
+.pe-mode-seg {
+  display: flex;
+  gap: 3px;
+  background: rgba(184, 92, 78, 0.09);
+  padding: 3px;
+  border-radius: 7px;
+  flex: 1;
+  justify-content: center;
+}
+
+.pe-seg-btn {
+  border: none;
+  background: transparent;
+  color: rgba(184, 92, 78, 0.75);
+  border-radius: 5px;
+  padding: 3px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font-text);
+  transition: background 0.14s, color 0.14s;
+  line-height: 1.4;
+}
+
+.pe-seg-btn:hover {
+  background: rgba(184, 92, 78, 0.14);
+  color: #B85C4E;
+}
+
+.pe-seg-btn.pe-seg-active {
+  background: #B85C4E;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── 截图按钮（相机图标）──────────────────────────────────── */
+
+.pe-icon-btn {
+  border: none;
+  background: transparent;
+  color: rgba(184, 92, 78, 0.6);
+  border-radius: 5px;
+  padding: 4px 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.14s, color 0.14s;
+  line-height: 1;
+}
+
+.pe-icon-btn:hover {
+  background: rgba(184, 92, 78, 0.12);
+  color: #B85C4E;
+}
+
+.pe-icon-btn svg {
+  display: block;
+}
+
+/* ── 输出区 ────────────────────────────────────────────────── */
+
+.pe-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 18px 12px;
+  line-height: 1.75;
+  color: var(--text-normal);
+  word-break: break-word;
+  scroll-behavior: smooth;
+}
+
+.pe-output::-webkit-scrollbar       { width: 4px; }
+.pe-output::-webkit-scrollbar-thumb { background: rgba(184, 92, 78, 0.28); border-radius: 2px; }
+.pe-output::-webkit-scrollbar-track { background: transparent; }
+
+/* ── 占位状态 ──────────────────────────────────────────────── */
+
+.pe-output--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pe-placeholder {
+  text-align: center;
+  padding: 24px 16px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ── tip 标签 ──────────────────────────────────────────────── */
+
+.pe-placeholder-tip {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #B85C4E;
+  opacity: 0.7;
+  margin-bottom: 18px;
+}
+
+/* ── 按键示意组合 ──────────────────────────────────────────── */
+
+.pe-shortcut-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.pe-key {
+  display: inline-block;
+  background: var(--background-secondary);
+  border: 1px solid rgba(184, 92, 78, 0.3);
+  border-bottom: 2px solid rgba(184, 92, 78, 0.45);
+  border-radius: 5px;
+  padding: 3px 9px;
+  font-family: var(--font-monospace);
+  font-size: 11px;
+  color: #B85C4E;
+  font-weight: 600;
+  box-shadow: 0 1px 0 rgba(184, 92, 78, 0.12);
+  white-space: nowrap;
+}
+
+.pe-key--hero {
+  font-size: 12px;
+  padding: 5px 13px;
+  border-bottom-width: 3px;
+  box-shadow: 0 2px 0 rgba(184, 92, 78, 0.15);
+}
+
+.pe-demo-plus {
+  font-size: 16px;
+  color: rgba(184, 92, 78, 0.4);
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── 说明文字 ──────────────────────────────────────────────── */
+
+.pe-placeholder-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+
+/* ── 分隔线 ────────────────────────────────────────────────── */
+
+.pe-placeholder-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(184, 92, 78, 0.2);
+  margin: 0 auto 14px;
+}
+
+.pe-sub-hint {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── 流式输出文本容器 ──────────────────────────────────────── */
+
+.pe-stream-text {
+  white-space: pre-wrap;
+  color: var(--text-normal);
+  line-height: 1.75;
+}
+
+/* 流式阶段末尾闪烁光标（使用 ::after 伪元素） */
+.pe-stream-text::after {
+  content: "▌";
+  color: #B85C4E;
+  animation: pe-cursor-blink 0.7s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes pe-cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── 错误展示框（首块未到达时显示在输出区） ───────────────── */
+
+.pe-error-box {
+  background: rgba(192, 57, 43, 0.07);
+  border: 1px solid rgba(192, 57, 43, 0.25);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+/* ── Markdown 渲染覆盖（精排阶段） ─────────────────────────── */
+
+.pe-output p {
+  margin: 0 0 0.85em;
+}
+
+.pe-output blockquote {
+  border-left: 3px solid #B85C4E;
+  margin: 0.85em 0;
+  padding: 6px 14px;
+  color: var(--text-muted);
+  background: rgba(184, 92, 78, 0.06);
+  border-radius: 0 5px 5px 0;
+}
+
+.pe-output strong {
+  color: #B85C4E;
+  font-weight: 700;
+}
+
+.pe-output ul,
+.pe-output ol {
+  padding-left: 1.4em;
+  margin: 0.6em 0;
+}
+
+.pe-output li {
+  margin-bottom: 0.3em;
+}
+
+.pe-output table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 0.8em 0;
+}
+
+.pe-output th {
+  background: rgba(184, 92, 78, 0.09);
+  color: #B85C4E;
+  font-weight: 600;
+  padding: 6px 10px;
+  border: 1px solid rgba(184, 92, 78, 0.2);
+  text-align: left;
+}
+
+.pe-output td {
+  padding: 5px 10px;
+  border: 1px solid var(--background-modifier-border);
+  vertical-align: top;
+}
+
+.pe-output tr:nth-child(even) td {
+  background: rgba(184, 92, 78, 0.03);
+}
+
+.pe-output code {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  background: var(--background-secondary);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.pe-output pre {
+  background: var(--background-secondary);
+  padding: 10px 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 12px;
+}
+
+/* ── 底栏：状态 + 复制按钮 ─────────────────────────────────── */
+
+.pe-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  min-height: 30px;
+  border-top: 1px solid rgba(184, 92, 78, 0.13);
+  background: rgba(184, 92, 78, 0.03);
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.pe-status {
+  font-size: 11px;
+  color: var(--text-faint);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* loading 状态：旋转指示器 */
+.pe-status--loading {
+  color: #B85C4E;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pe-status--loading::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid rgba(184, 92, 78, 0.35);
+  border-top-color: #B85C4E;
+  border-radius: 50%;
+  animation: pe-spin 0.65s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pe-spin {
+  to { transform: rotate(360deg); }
+}
+
+.pe-status--done {
+  color: var(--color-green, #3c8a5a);
+}
+
+.pe-status--error {
+  color: var(--color-red, #c0392b);
+}
+
+/* ── 插入笔记按钮（镂空，与复制按钮形成视觉错落） ──────────── */
+
+.pe-insert-btn {
+  flex-shrink: 0;
+  border: 1px solid rgba(184, 92, 78, 0.45);
+  background: transparent;
+  color: #B85C4E;
+  border-radius: 5px;
+  padding: 3px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: var(--font-text);
+  transition: background 0.14s, color 0.14s, border-color 0.14s;
+  line-height: 1.5;
+}
+
+.pe-insert-btn:hover {
+  background: rgba(184, 92, 78, 0.1);
+  border-color: #B85C4E;
+}
+
+/* ── 复制按钮（全涂色，与插入按钮形成视觉节奏） ────────────── */
+
+.pe-copy-btn {
+  flex-shrink: 0;
+  border: 1px solid #B85C4E;
+  background: #B85C4E;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: var(--font-text);
+  transition: background 0.14s, border-color 0.14s;
+  line-height: 1.5;
+}
+
+.pe-copy-btn:hover {
+  background: #a34640;
+  border-color: #a34640;
+}
+
+.pe-copy-btn--done {
+  background: var(--color-green, #3c8a5a);
+  border-color: var(--color-green, #3c8a5a);
+  color: #fff;
+}
+
+.pe-hidden {
+  display: none !important;
+}
+
+/* ── RTL 支持（阿拉伯语） ──────────────────────────────────────── */
+
+[dir="rtl"].pe-root,
+[dir="rtl"] .pe-root {
+  direction: rtl;
+}
+
+[dir="rtl"] .pe-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .pe-shortcut-hint {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .pe-footer {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .pe-output blockquote {
+  border-left: none;
+  border-right: 3px solid #B85C4E;
+  border-radius: 5px 0 0 5px;
+  padding: 6px 14px 6px 6px;
+}
