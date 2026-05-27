@@ -1,6 +1,6 @@
 {
   "id": "papereater",
-  "name": "PaperEater (食卷兽)",
+  "name": "PaperEater",
   "version": "1.0.0",
   "minAppVersion": "1.4.0",
   "description": "Deconstruct complex academic jargon into plain language using the Feynman Technique. Powered by Gemini.",
